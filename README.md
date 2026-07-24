@@ -38,6 +38,7 @@ Import the included SQL database into MySQL before running the application.
 ## Author
 
 Jed Angelo Manubag
+Maria Liza Alforque
 
 ## License
 
