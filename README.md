@@ -35,10 +35,10 @@ Allows consumers to view billing history and consumption records.
 
 Import the included SQL database into MySQL before running the application.
 
-## Author
+## Project  Author
 
-Jed Angelo Manubag
-Maria Liza Alforque
+-Jed Angelo Manubag
+-Maria Liza Alforque
 
 ## License
 
