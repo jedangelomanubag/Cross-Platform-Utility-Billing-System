@@ -1,0 +1,215 @@
+/* Blue & White Theme for Utility Billing System */
+:root {
+    --primary-blue: #0d6efd;
+    --dark-blue: #0a58ca;
+    --light-blue: #cfe2ff;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --text-dark: #212529;
+    --border-color: #dee2e6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-gray);
+    color: var(--text-dark);
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--primary-blue) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: var(--white) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--light-blue) !important;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border-radius: 10px 10px 0 0 !important;
+    font-weight: 600;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-blue);
+    border-color: var(--dark-blue);
+}
+
+/* Forms */
+.form-control:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Login Page */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+}
+
+.login-card {
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h2 {
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+/* Dashboard */
+.dashboard-header {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.stat-card {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Tables */
+.table {
+    background-color: var(--white);
+}
+
+.table thead th {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+}
+
+/* Badges */
+.badge-paid {
+    background-color: #198754;
+}
+
+.badge-unpaid {
+    background-color: #ffc107;
+    color: var(--text-dark);
+}
+
+.badge-overdue {
+    background-color: #dc3545;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--white);
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-card {
+        margin: 20px;
+    }
+    
+    .stat-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .table {
+        font-size: 0.875rem;
+    }
+}
+
+/* Role Selection Page */
+.role-selection {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+}
+
+.role-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+}
+
+.role-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.role-icon {
+    font-size: 4rem;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+.role-card h3 {
+    color: var(--primary-blue);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.role-card p {
+    color: #6c757d;
+}
+
+/* Alerts */
+.alert {
+    border-radius: 10px;
+    border: none;
+}
+
+/* Loading Spinner */
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+}

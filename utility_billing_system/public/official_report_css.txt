@@ -1,0 +1,258 @@
+<style>
+/* Official Form Styles */
+.official-form {
+  display: none;
+  font-family: 'Times New Roman', 'Liberation Serif', serif;
+  font-size: 11px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Table Styles */
+.official-form table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #000;
+  margin-bottom: 15px;
+}
+
+.official-form td {
+  border: 1px solid #000;
+  padding: 5px;
+  vertical-align: top;
+}
+
+/* Header Table */
+.header-table {
+  margin-bottom: 20px;
+}
+
+.logo-cell {
+  width: 15%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.logo-img {
+  max-width: 80px;
+  max-height: 80px;
+  border: 1px solid #000;
+}
+
+.title-cell {
+  width: 85%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 15px 10px;
+}
+
+.org-name {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.form-title {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.info-cell {
+  padding: 5px;
+}
+
+.info-table {
+  width: 100%;
+  border: none;
+}
+
+.info-table td {
+  border: 1px solid #000;
+  padding: 3px 5px;
+  font-size: 10px;
+}
+
+.info-label {
+  font-weight: bold;
+  text-align: right;
+  width: 500px;
+}
+
+.info-value {
+  text-align: left;
+  width: 30%;
+}
+
+/* Section Headers */
+.section-header {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 8px 5px;
+}
+
+/* Summary Table */
+.summary-table td {
+  padding: 8px;
+  text-align: center;
+}
+
+.summary-cell {
+  width: 25%;
+  text-align: center;
+}
+
+.summary-label {
+  font-weight: bold;
+  font-size: 10px;
+  margin-bottom: 3px;
+}
+
+.summary-value {
+  font-size: 11px;
+}
+
+/* Details Table */
+.column-headers td {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+  text-transform: uppercase;
+  padding: 6px 3px;
+}
+
+.data-row td {
+  text-align: center;
+  font-size: 9px;
+  padding: 4px 3px;
+}
+
+.data-cell:first-child,
+.data-cell:nth-child(3),
+.data-cell:nth-child(4),
+.data-cell:nth-child(6) {
+  text-align: center;
+}
+
+.data-cell:nth-child(2),
+.data-cell:nth-child(5),
+.data-cell:nth-child(7) {
+  text-align: left;
+}
+
+.no-data {
+  text-align: center !important;
+  font-style: italic;
+  background-color: #f9f9f9 !important;
+}
+
+/* Signature Table */
+.signature-table td {
+  padding: 15px 8px;
+  text-align: center;
+}
+
+.signature-cell {
+  width: 33.33%;
+}
+
+.signature-line {
+  border-bottom: 1px solid #000;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.signature-label {
+  font-weight: bold;
+  font-size: 9px;
+  margin-bottom: 2px;
+}
+
+.signature-name {
+  font-size: 9px;
+  margin-bottom: 2px;
+}
+
+.signature-date {
+  font-size: 9px;
+}
+
+/* Print Media Rules */
+@media print {
+  /* Hide screen elements */
+  .card,
+  #searchInput,
+  #filterBtn,
+  #exportExcelBtn,
+  #monthSelect,
+  #yearSelect,
+  #statusSelect,
+  #barangaySelect,
+  button,
+  .btn,
+  .mb-3,
+  .g-3,
+  .row.g-3 {
+    display: none !important;
+  }
+  
+  /* Show official form */
+  .official-form {
+    display: block !important;
+  }
+  
+  /* Page setup */
+  @page {
+    size: A4;
+    margin: 0.7cm;
+  }
+  
+  body {
+    font-family: 'Times New Roman', 'Liberation Serif', serif !important;
+    font-size: 11px !important;
+    color: #000 !important;
+    background: #fff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Force borders and backgrounds */
+  .official-form table,
+  .official-form td {
+    border: 1px solid #000 !important;
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  .official-form table {
+    border: 2px solid #000 !important;
+  }
+  
+  .section-header,
+  .column-headers td {
+    background-color: #000 !important;
+    color: #fff !important;
+  }
+  
+  /* Ensure proper printing */
+  .official-form {
+    page-break-inside: avoid;
+  }
+  
+  .summary-table,
+  .details-table,
+  .signature-table {
+    page-break-inside: avoid;
+  }
+}
+</style>

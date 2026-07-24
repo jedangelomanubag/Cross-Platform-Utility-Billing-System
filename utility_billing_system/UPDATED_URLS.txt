@@ -1,0 +1,112 @@
+╔═══════════════════════════════════════════════════════════════════════╗
+║                    ✅ UPDATED - FILE CONFLICT RESOLVED                ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+📝 CHANGE SUMMARY
+═══════════════════════════════════════════════════════════════════════
+
+Your existing public/index.php has been preserved!
+
+The role selection page has been renamed to:
+   portal_selection.php
+
+═══════════════════════════════════════════════════════════════════════
+🌐 UPDATED ACCESS URLS
+═══════════════════════════════════════════════════════════════════════
+
+🏠 YOUR EXISTING HOMEPAGE (Iligan Water District Landing Page)
+   👉 http://localhost/utility_billing_system/public/
+   
+   This is your beautiful landing page with:
+   - Hero section
+   - Services showcase
+   - About section
+   - Contact information
+   - Footer with social links
+
+───────────────────────────────────────────────────────────────────────
+
+🎯 PORTAL SELECTION PAGE (Choose Admin/Reader/Consumer)
+   👉 http://localhost/utility_billing_system/portal_selection.php
+   
+   This page lets users select which portal to access:
+   - Admin Portal
+   - Utility Reader Portal
+   - Consumer Portal
+
+───────────────────────────────────────────────────────────────────────
+
+👷‍♂️ READER PORTAL
+   👉 http://localhost/utility_billing_system/reader_portal/
+   
+   Login: lucas / password123
+
+───────────────────────────────────────────────────────────────────────
+
+👩‍🔧 CONSUMER PORTAL
+   👉 http://localhost/utility_billing_system/consumer_portal/
+   
+   Login: michaelacristobal1998@gmail.com / password123
+
+───────────────────────────────────────────────────────────────────────
+
+👨‍💼 ADMIN PORTAL
+   👉 http://localhost/utility_billing_system/portal/login.php
+   
+   Login: admin@example.com / password
+
+═══════════════════════════════════════════════════════════════════════
+💡 SUGGESTED INTEGRATION
+═══════════════════════════════════════════════════════════════════════
+
+You can add a link to the portal selection page from your existing
+public homepage. For example, in public/index.php, you could add:
+
+In the navigation menu (around line 470):
+   <a href="../portal_selection.php" class="btn btn-primary">
+       <i class="fas fa-sign-in-alt me-2"></i> Portal Login
+   </a>
+
+Or in the footer Quick Links section (around line 667):
+   <li><a href="../portal_selection.php">Staff Portal</a></li>
+
+═══════════════════════════════════════════════════════════════════════
+📂 FILE STRUCTURE
+═══════════════════════════════════════════════════════════════════════
+
+utility_billing_system/
+├── portal_selection.php    ← NEW: Role selection page
+├── public/
+│   └── index.php          ← PRESERVED: Your existing homepage
+├── reader_portal/         ← NEW: Reader portal (5 files)
+├── consumer_portal/       ← NEW: Consumer portal (4 files)
+├── api/                   ← NEW: API endpoints (5 files)
+├── includes/
+│   └── db_connect.php     ← NEW: Database connection
+├── assets/
+│   └── css/
+│       └── custom.css     ← NEW: Blue/white theme
+└── portal/                ← EXISTING: Admin portal
+
+═══════════════════════════════════════════════════════════════════════
+✅ TESTING CHECKLIST
+═══════════════════════════════════════════════════════════════════════
+
+1. □ Test your existing homepage:
+      http://localhost/utility_billing_system/public/
+
+2. □ Test portal selection page:
+      http://localhost/utility_billing_system/portal_selection.php
+
+3. □ Run setup script (one time):
+      http://localhost/utility_billing_system/database/create_test_users.php
+
+4. □ Test reader portal login and functionality
+
+5. □ Test consumer portal login and functionality
+
+═══════════════════════════════════════════════════════════════════════
+
+✨ All files are ready! No conflicts with your existing setup.
+
+═══════════════════════════════════════════════════════════════════════

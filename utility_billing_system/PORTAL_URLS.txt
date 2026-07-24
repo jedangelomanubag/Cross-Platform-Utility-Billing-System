@@ -1,0 +1,100 @@
+╔════════════════════════════════════════════════════════════════════╗
+║          UTILITY BILLING SYSTEM - PORTAL ACCESS URLS              ║
+╚════════════════════════════════════════════════════════════════════╝
+
+📌 MAIN HOMEPAGE (Public Landing Page)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔗 http://localhost/utility_billing_system/public/
+
+📌 PORTAL SELECTION PAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔗 http://localhost/utility_billing_system/portal_selection.php
+
+
+👷‍♂️ READER PORTAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔗 http://localhost/utility_billing_system/reader_portal/
+
+📋 Login Credentials:
+   Username: lucas
+   Password: password123
+
+📄 Pages:
+   • Login:           /reader_portal/index.php
+   • Dashboard:       /reader_portal/dashboard.php
+   • Add Reading:     /reader_portal/add_reading.php
+   • Recent Readings: /reader_portal/recent_readings.php
+   • Logout:          /reader_portal/logout.php
+
+
+👩‍🔧 CONSUMER PORTAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔗 http://localhost/utility_billing_system/consumer_portal/
+
+📋 Login Credentials:
+   Email:    michaelacristobal1998@gmail.com
+   Password: password123
+
+📄 Pages:
+   • Login:           /consumer_portal/index.php
+   • Dashboard:       /consumer_portal/dashboard.php
+   • Billing History: /consumer_portal/billing_history.php
+   • Logout:          /consumer_portal/logout.php
+
+
+👨‍💼 ADMIN PORTAL (Existing)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔗 http://localhost/utility_billing_system/portal/login.php
+
+📋 Login Credentials:
+   Email:    admin@example.com
+   Password: password (your existing admin password)
+
+
+🔧 SETUP & TESTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚙️ Setup Test Users (Run Once):
+   http://localhost/utility_billing_system/database/create_test_users.php
+
+📊 phpMyAdmin:
+   http://localhost/phpmyadmin
+
+
+🌐 API ENDPOINTS (JSON Responses)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Reader Login:        /api/reader_login.php
+• Consumer Login:      /api/consumer_login.php
+• Add Reading:         /api/add_reading.php
+• Fetch Bills:         /api/consumer_fetch_bills.php
+• Recent Readings:     /api/list_recent_readings.php
+
+
+📱 MOBILE ACCESS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Find your computer's IP address (e.g., 192.168.1.100)
+Then access from mobile:
+   http://192.168.1.100/utility_billing_system/
+
+
+✅ QUICK TEST CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. ✓ XAMPP Apache & MySQL running
+2. ✓ Run create_test_users.php (one time)
+3. ✓ Login to reader portal
+4. ✓ Add a meter reading
+5. ✓ Login to consumer portal
+6. ✓ View the generated bill
+7. ✓ Check usage chart displays
+
+
+📚 DOCUMENTATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Quick Start:  QUICK_START.md
+• Full Docs:    README_PORTALS.md
+• This File:    PORTAL_URLS.txt
+
+
+═══════════════════════════════════════════════════════════════════════
+Last Updated: October 20, 2025
+Version: 1.0.0
+═══════════════════════════════════════════════════════════════════════

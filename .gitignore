@@ -1,0 +1,18 @@
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Dependencies
+node_modules/
+vendor/
+
+# Uploaded files
+utility_billing_system/uploads/previous_bills/*
+!utility_billing_system/uploads/previous_bills/.gitkeep

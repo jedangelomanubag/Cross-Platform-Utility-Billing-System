@@ -1,0 +1,116 @@
+<!-- Official Report Layout -->
+<div class="official-form">
+  <!-- Header Section -->
+  <table class="header-table">
+    <tr>
+      <td class="logo-cell" rowspan="2">
+        <img src="../assets/logo.png" alt="Logo" class="logo-img">
+      </td>
+      <td class="title-cell">
+        <div class="org-name">ILIGAN CITY WATERWORKS SYSTEM</div>
+        <div class="form-title">MONTHLY BILLING AND COLLECTION REPORT</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="info-cell">
+        <table class="info-table">
+          <tr>
+            <td class="info-label">Month:</td>
+            <td class="info-value"><?= date('F', mktime(0,0,0,$month,1)) ?> <?= $year ?></td>
+            <td class="info-label">Barangay:</td>
+            <td class="info-value"><?= $barangay_filter ?: 'All Barangays' ?></td>
+          </tr>
+          <tr>
+            <td class="info-label">Generated:</td>
+            <td class="info-value" colspan="3"><?= date('Y-m-d H:i:s') ?></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Summary Section -->
+  <table class="summary-table">
+    <tr>
+      <td class="section-header" colspan="4">SUMMARY INFORMATION</td>
+    </tr>
+    <tr>
+      <td class="summary-cell">
+        <div class="summary-label">Total Bills</div>
+        <div class="summary-value"><?= number_format($total_bills) ?></div>
+      </td>
+      <td class="summary-cell">
+        <div class="summary-label">Total Consumption (m³)</div>
+        <div class="summary-value"><?= number_format($total_consumption) ?></div>
+      </td>
+      <td class="summary-cell">
+        <div class="summary-label">Total Revenue (₱)</div>
+        <div class="summary-value"><?= number_format($total_revenue, 2) ?></div>
+      </td>
+      <td class="summary-cell">
+        <div class="summary-label">Date Generated</div>
+        <div class="summary-value"><?= date('F j, Y') ?></div>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Billing Details Section -->
+  <table class="details-table">
+    <tr>
+      <td class="section-header" colspan="7">BILLING RECORDS</td>
+    </tr>
+    <tr class="column-headers">
+      <td class="header-cell">Billing ID</td>
+      <td class="header-cell">Consumer Name</td>
+      <td class="header-cell">Billing Period</td>
+      <td class="header-cell">Consumption (m³)</td>
+      <td class="header-cell">Total Amount</td>
+      <td class="header-cell">Payment Status</td>
+      <td class="header-cell">Barangay</td>
+    </tr>
+    <?php if (!empty($filtered_rows)): ?>
+      <?php foreach ($filtered_rows as $row): ?>
+        <tr class="data-row">
+          <td class="data-cell"><?= htmlspecialchars($row['BillingID']) ?></td>
+          <td class="data-cell"><?= htmlspecialchars($row['FirstName'].' '.$row['LastName']) ?></td>
+          <td class="data-cell"><?= htmlspecialchars($row['BillingPeriod']) ?></td>
+          <td class="data-cell"><?= number_format($row['Consumption']) ?></td>
+          <td class="data-cell"><?= number_format($row['TotalAmount'], 2) ?></td>
+          <td class="data-cell"><?= htmlspecialchars($row['PaymentStatus']) ?></td>
+          <td class="data-cell"><?= htmlspecialchars($row['DetectedBarangay']) ?></td>
+        </tr>
+      <?php endforeach; ?>
+    <?php else: ?>
+      <tr class="data-row">
+        <td class="data-cell no-data" colspan="7">No billing records found for the selected criteria.</td>
+      </tr>
+    <?php endif; ?>
+  </table>
+
+  <!-- Signature Section -->
+  <table class="signature-table">
+    <tr>
+      <td class="section-header" colspan="3">CERTIFICATION</td>
+    </tr>
+    <tr>
+      <td class="signature-cell">
+        <div class="signature-line"></div>
+        <div class="signature-label">Prepared By:</div>
+        <div class="signature-name">Name & Signature</div>
+        <div class="signature-date">Date: _________________</div>
+      </td>
+      <td class="signature-cell">
+        <div class="signature-line"></div>
+        <div class="signature-label">Reviewed By:</div>
+        <div class="signature-name">Name & Signature</div>
+        <div class="signature-date">Date: _________________</div>
+      </td>
+      <td class="signature-cell">
+        <div class="signature-line"></div>
+        <div class="signature-label">Approved By:</div>
+        <div class="signature-name">Name & Signature</div>
+        <div class="signature-date">Date: _________________</div>
+      </td>
+    </tr>
+  </table>
+</div>
